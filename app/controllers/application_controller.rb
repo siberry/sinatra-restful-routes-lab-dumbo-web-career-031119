@@ -6,6 +6,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
+<<<<<<< HEAD
   # code actions here!
   get '/recipes' do
     erb :index
@@ -42,5 +43,15 @@ class ApplicationController < Sinatra::Base
     Recipe.destroy(params[:id])
     redirect to "/recipes/"
   end
+=======
+  get '/recipes' do
+    erb :index
+  end
+  
+  get '/recipes/:id' do
+    @recipe = Recipe.find(:id)
+    erb :show
+  end
+>>>>>>> 0348e9cbaab674662f4012bfb111818eafbefeae
 
 end
